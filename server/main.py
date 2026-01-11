@@ -30,7 +30,10 @@ async def on_startup():
 # Configure CORS for the React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",              # local dev
+        "https://respira-green.vercel.app"    # production
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
