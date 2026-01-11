@@ -109,6 +109,7 @@ function Completion() {
       }} />
 
       <div
+        className="logo-overlay"
         style={{
           position: 'absolute',
           top: '1.25rem',
@@ -129,6 +130,7 @@ function Completion() {
       </div>
 
       <div
+        className="onboarding-container"
         style={{
           position: 'relative',
           zIndex: 1,

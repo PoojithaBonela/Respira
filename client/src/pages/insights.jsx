@@ -89,7 +89,7 @@ function Insights() {
 
 
             {/* Main Content Wrapper - Fixes the overlap issue */}
-            <div style={mainContentStyle}>
+            <div className="page-container" style={mainContentStyle}>
 
                 {/* Title Section */}
                 <div style={{ textAlign: 'center', marginBottom: '20px' }}>
@@ -109,7 +109,7 @@ function Insights() {
                 </div>
 
                 {/* Cards Grid */}
-                <div style={cardGridStyle}>
+                <div className="insights-grid" style={cardGridStyle}>
 
                     {/* Card 1: Trend */}
                     <Card title="Weekly Trend" subtitle={new Date().toLocaleString('default', { month: 'long' })} glowColor="#3b82f6">

@@ -405,7 +405,7 @@ function Urge() {
 
         return (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', alignItems: 'center', width: '100%' }}>
-                <div style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'stretch', justifyContent: 'center', width: '100%', flexWrap: 'wrap' }}>
+                <div className="hero-section" style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'stretch', justifyContent: 'center', width: '100%', flexWrap: 'wrap' }}>
                     {/* Main Card */}
                     <div style={{ ...cardStyle, flex: '1 1 400px', maxWidth: '480px' }}>
                         <div style={{
@@ -526,7 +526,7 @@ function Urge() {
                 </div>
 
                 {/* --- Stats Row --- */}
-                <div style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'stretch', justifyContent: 'center', width: '100%', flexWrap: 'wrap' }}>
+                <div className="hero-section" style={{ display: 'flex', flexDirection: 'row', gap: '32px', alignItems: 'stretch', justifyContent: 'center', width: '100%', flexWrap: 'wrap' }}>
                     {/* Urge Stats Card */}
                     <div style={{
                         ...cardStyle,
@@ -658,7 +658,7 @@ function Urge() {
                     <h2 style={{ ...titleStyle, color: '#63b3ed' }}>Question 1</h2>
                     <h1 style={headingStyle}>How are you feeling right now?</h1>
 
-                    <div style={gridStyle}>
+                    <div className="urge-grid" style={gridStyle}>
                         {options.map((opt) => (
                             <div
                                 key={opt.label}
@@ -711,7 +711,7 @@ function Urge() {
                     <h2 style={{ ...titleStyle, color: '#a0aec0' }}>Question 2 (Optional)</h2>
                     <h1 style={headingStyle}>Where are you right now?</h1>
 
-                    <div style={{ ...gridStyle, gridTemplateColumns: 'repeat(3, 120px)' }}>
+                    <div className="urge-grid" style={{ ...gridStyle, gridTemplateColumns: 'repeat(3, 120px)' }}>
                         {options.map((opt) => (
                             <div
                                 key={opt.label}
@@ -874,7 +874,7 @@ function Urge() {
 
 
             {/* Main Content */}
-            <div style={mainContentStyle}>
+            <div className="page-container" style={mainContentStyle}>
                 {step === 0 && renderStep0()}
                 {step === 1 && renderStep1()}
                 {step === 2 && renderStep2()}

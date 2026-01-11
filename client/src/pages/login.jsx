@@ -397,6 +397,7 @@ function Login() {
         }}
       >
         <div
+          className="logo-overlay"
           style={{
             position: 'absolute',
             top: '1.5rem',
@@ -416,6 +417,7 @@ function Login() {
           Respira
         </div>
         <div
+          className="onboarding-container"
           style={{
             zIndex: 10,
             width: '100%',

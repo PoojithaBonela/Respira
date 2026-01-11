@@ -26,10 +26,10 @@ export default function AppLayout() {
     }
 
     return (
-        <div style={{ position: 'relative', width: '100%' }}>
+        <div className="app-layout-wrapper" style={{ position: 'relative', width: '100%' }}>
 
             {/* Global Header */}
-            <div style={{
+            <div className="main-header" style={{
                 position: 'absolute',
                 top: 0,
                 left: 0,
@@ -45,6 +45,7 @@ export default function AppLayout() {
                 {/* Logo & Nav - pointer events auto */}
                 <div style={{ display: 'flex', alignItems: 'center', pointerEvents: 'auto' }}>
                     <div
+                        className="logo-text"
                         style={{
                             fontSize: '2.1rem',
                             fontWeight: 800,
@@ -72,7 +73,7 @@ export default function AppLayout() {
                         Respira
                     </div>
 
-                    <div style={{ display: 'flex', gap: '40px' }}> {/* Grouped buttons with even spacing */}
+                    <div className="nav-buttons-container" style={{ display: 'flex', gap: '40px' }}> {/* Grouped buttons with even spacing */}
                         <button
                             type="button"
                             onClick={() => navigate('/calendar')}
@@ -166,5 +167,6 @@ export default function AppLayout() {
             {/* Content */}
             <Outlet />
         </div>
+
     )
 }

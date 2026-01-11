@@ -16,8 +16,6 @@ function Calendar() {
     days_smoked: 0,
     longest_streak: 0,
     money_spent: 0,
-    longest_streak: 0,
-    money_spent: 0,
     total_cigarettes: 0,
     min_year: new Date().getFullYear() // Default to current year
   })
@@ -152,7 +150,7 @@ function Calendar() {
 
 
       {/* Main Content */}
-      <div style={{
+      <div className="page-container" style={{
         paddingTop: '120px',
         paddingBottom: '60px',
         paddingLeft: '40px',
@@ -246,7 +244,7 @@ function Calendar() {
         </div>
 
         {/* Stats Grid - FORCED SINGLE ROW */}
-        <div style={{
+        <div className="stats-row" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
           gap: '24px',
@@ -282,7 +280,7 @@ function Calendar() {
         </div>
 
         {/* Calendar Grid Container */}
-        <div style={{
+        <div className="calendar-card" style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.03) 100%)',
           backdropFilter: 'blur(12px)',
           borderRadius: '24px',
@@ -305,7 +303,7 @@ function Calendar() {
             pointerEvents: 'none'
           }} />
           <div style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{
+            <div className="calendar-months-container" style={{
               display: 'flex',
               flexWrap: 'wrap',
               gap: `${MONTH_GAP}px`,
@@ -692,7 +690,7 @@ function TradingGraph({ data, labels, startIndex = 0 }) {
   }))
 
   return (
-    <div style={{ width: '100%', overflowX: 'auto' }}>
+    <div className="scroll-container" style={{ width: '100%', overflowX: 'auto' }}>
       <svg viewBox={`0 0 ${width} ${height}`} style={{ width: '100%', minWidth: '800px', overflow: 'visible' }}>
         {/* Grid Lines */}
         {[0, 0.25, 0.5, 0.75, 1].map((tick) => {

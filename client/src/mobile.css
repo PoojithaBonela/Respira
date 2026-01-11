@@ -1,0 +1,155 @@
+/* Mobile Layout Overrides - Additive Only */
+
+@media (max-width: 768px) {
+
+    /* Global Container */
+    #root {
+        overflow-x: hidden;
+    }
+
+    /* Core Layout Wrapper (if any) */
+    .app-layout-wrapper {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Header & Navigation */
+    .main-header {
+        padding: 1rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+        height: auto !important;
+        position: relative !important;
+    }
+
+    .nav-buttons-container {
+        width: 100% !important;
+        overflow-x: auto !important;
+        padding-bottom: 8px !important;
+        gap: 12px !important;
+        scrollbar-width: none;
+        /* Hide scrollbar for cleaner look */
+    }
+
+    .nav-buttons-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logo-text {
+        margin-right: 0 !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* General Content Scaling */
+    .page-container {
+        padding-top: 140px !important;
+        /* Adjust for stacked header */
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .onboarding-container {
+        padding-top: 80px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .logo-overlay {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: 20px !important;
+        width: 100% !important;
+        text-align: center !important;
+        font-size: 1.8rem !important;
+    }
+
+    /* Profile Page */
+    .hero-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 16px !important;
+    }
+
+    .hero-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 160px !important;
+    }
+
+    .log-button {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 120px !important;
+    }
+
+    .feature-carousel-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .feature-card {
+        width: 280px !important;
+        /* Smaller for mobile */
+    }
+
+    /* Insights Page */
+    .insights-grid {
+        grid-template-columns: 1fr !important;
+        padding: 0 !important;
+        gap: 20px !important;
+    }
+
+    /* Urge Page */
+    .urge-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        /* 2 columns on mobile */
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .urge-grid>div {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 120px !important;
+    }
+
+    /* Rewards Page */
+    .hero-rewards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .milestones-grid {
+        grid-template-columns: 1fr !important;
+        /* Stack milestone cards */
+        gap: 16px !important;
+    }
+
+    /* Calendar Page */
+    .stats-row {
+        grid-template-columns: 1fr 1fr !important;
+        /* 2x2 on mobile */
+        min-width: 0 !important;
+    }
+
+    .calendar-card {
+        padding: 15px !important;
+    }
+
+    .calendar-months-container {
+        gap: 16px !important;
+    }
+
+    /* Charts Horizontal Scroll */
+    .scroll-container {
+        width: 100% !important;
+        overflow-x: auto !important;
+        scrollbar-width: thin;
+    }
+}

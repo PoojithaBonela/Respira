@@ -30,7 +30,7 @@ function SnapshotCard({ hasLogged, todayCount, stats }) {
   const lastLogDate = stats?.last_log_date ? new Date(stats.last_log_date).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : 'N/A'
 
   return (
-    <div style={{
+    <div className="hero-card" style={{
       ...cardBaseStyle,
       background: 'rgba(255, 255, 255, 0.03)',
       backdropFilter: 'blur(16px)',
@@ -140,7 +140,7 @@ function InsightCard({ hasLogged, navigate }) {
   }, [hasLogged])
 
   return (
-    <div style={{
+    <div className="hero-card" style={{
       ...cardBaseStyle,
       background: 'rgba(255, 255, 255, 0.03)',
       backdropFilter: 'blur(16px)',
@@ -492,7 +492,7 @@ function Profile() {
       }} />
 
       {/* Main content area */}
-      <div style={{
+      <div className="page-container" style={{
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'center',
@@ -511,7 +511,7 @@ function Profile() {
         }}>
 
           {/* Dashboard Hero Section */}
-          <div style={{
+          <div className="hero-section" style={{
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'center',
@@ -532,6 +532,7 @@ function Profile() {
             {/* Center Action Tile */}
             <button
               type="button"
+              className="log-button hero-card"
               onClick={() => {
                 setIsLogModalOpen(true)
               }}
@@ -632,7 +633,7 @@ function Profile() {
             </div>
 
             {/* Feature Cards - Step Carousel */}
-            <div className="feature-carousel" style={{
+            <div className="feature-carousel feature-carousel-container" style={{
               width: '100%',
               maxWidth: '1106px', // Exact width for 3 cards (350*3 + 24*2 + 8px padding)
               margin: '0 auto',
@@ -654,7 +655,7 @@ function Profile() {
                 {displayCards.map((card, idx) => (
                   <div
                     key={`${card.id}-${idx}`}
-                    className="shine-card"
+                    className="shine-card feature-card"
                     style={{
                       position: 'relative',
                       borderRadius: '24px',

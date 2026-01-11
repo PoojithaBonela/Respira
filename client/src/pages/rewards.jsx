@@ -234,7 +234,7 @@ function Rewards() {
 
 
             {/* Main Content */}
-            <div style={{
+            <div className="page-container" style={{
                 paddingTop: '120px',
                 paddingBottom: '80px',
                 maxWidth: '1000px',
@@ -254,7 +254,7 @@ function Rewards() {
                 </div>
 
                 {/* Hero Section - Grid Layout */}
-                <div style={{
+                <div className="hero-rewards-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 1fr)', // Streak gets slightly more space
                     gap: '24px',
@@ -398,7 +398,7 @@ function Rewards() {
                             </div>
 
                             {/* Badges Row */}
-                            <div style={{
+                            <div className="milestones-grid" style={{
                                 display: 'grid',
                                 gridTemplateColumns: 'repeat(3, 1fr)',
                                 gap: '24px'
