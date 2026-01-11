@@ -3,8 +3,11 @@
 @media (max-width: 768px) {
 
     /* Global Container */
+    body,
     #root {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+        width: 100vw !important;
+        position: relative;
     }
 
     /* Core Layout Wrapper (if any) */
@@ -17,19 +20,36 @@
     .main-header {
         padding: 1rem !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 1rem !important;
+        align-items: center !important;
+        /* Center contents on mobile */
+        gap: 0.75rem !important;
         height: auto !important;
         position: relative !important;
+        width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Target the div wrapping logo and nav */
+    .main-header>div:first-child {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
     }
 
     .nav-buttons-container {
         width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
         overflow-x: auto !important;
-        padding-bottom: 8px !important;
+        -webkit-overflow-scrolling: touch;
+        padding: 4px 10px 12px 10px !important;
         gap: 12px !important;
+        white-space: nowrap !important;
         scrollbar-width: none;
-        /* Hide scrollbar for cleaner look */
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
     }
 
     .nav-buttons-container::-webkit-scrollbar {
