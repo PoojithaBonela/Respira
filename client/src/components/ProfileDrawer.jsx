@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { User, Mail, Edit2, LogOut, Moon, Sun, Bell, BellOff, Trash2, Info, Shield, Check, Coins, Target, ChevronRight, ChevronDown, X } from 'lucide-react'
+import { User, Mail, Edit2, LogOut, Moon, Sun, Bell, BellOff, Trash2, Info, Shield, Check, Coins, Target, ChevronRight, ChevronLeft, ChevronDown, X } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import { fetchWithAuth } from '../api' // Remove API_BASE_URL import if not used elsewhere, or keep if needed for constructing full URL in some edge case but fetchWithAuth handles it.
 // Actually fetchWithAuth handles base URL.
@@ -189,6 +189,42 @@ function ProfileDrawer({ isOpen, onClose }) {
                     overflowY: 'auto'
                 }}
             >
+                {/* Back Button for Mobile/Drawer */}
+                <div style={{
+                    padding: '16px 20px 0 20px',
+                    display: 'flex',
+                    justifyContent: 'flex-start'
+                }}>
+                    <button
+                        onClick={onClose}
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.1)',
+                            padding: '8px 16px',
+                            borderRadius: '12px',
+                            color: '#cbd5e0',
+                            fontSize: '14px',
+                            fontWeight: 500,
+                            cursor: 'pointer',
+                            transition: 'all 0.2s'
+                        }}
+                        onMouseOver={e => {
+                            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'
+                            e.currentTarget.style.color = '#fff'
+                        }}
+                        onMouseOut={e => {
+                            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
+                            e.currentTarget.style.color = '#cbd5e0'
+                        }}
+                    >
+                        <ChevronLeft size={18} />
+                        Back
+                    </button>
+                </div>
+
                 {/* Header Section */}
                 <div style={{
                     padding: '40px 32px',
