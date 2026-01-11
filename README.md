@@ -49,42 +49,67 @@ Safe and frictionless access:
 
 ---
 
-## 🛠️ Technical Implementation
+## � Local Development (Getting Started)
 
-### Frontend (React/Vite)
-- **State Management**: React hooks for real-time dashboard reactivity.
-- **Responsive Architecture**: Horizontal-scroll navigation tailored for mobile-first tracking.
-- **Lucide Iconography**: Semantic icons for health and financial metrics.
+Follow these steps to get a local copy of RESPIRA up and running.
 
-### Backend (FastAPI/MongoDB)
-- **High Performance**: Asynchronous Python (FastAPI) for low-latency logging.
-- **MongoDB Atlas**: Flexible storage for diverse behavioral data.
-- **JWT Authentication**: Secure, signed data exchanges.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/PoojithaBonela/Secure_File_Sharing.git
+cd Secure_File_Sharing
+```
 
----
+### 2. Backend Setup (`/server`)
+The backend is built with FastAPI and requires Python 3.11+.
 
-## ⚙️ Quick Start
-
-### 1. Requirements
-*   Node.js (v18+)
-*   Python 3.11.9
-*   MongoDB Atlas Connection
-
-### 2. Backend Setup
 ```bash
 cd server
 python -m venv venv
-source venv/bin/activate  # Windows: venv\\Scripts\\activate
+source venv/bin/activate  # On Windows: venv\\Scripts\\activate
 pip install -r requirements.txt
-python main.py
 ```
 
-### 3. Frontend Setup
+**Create a `.env` file in the `/server` directory:**
+```env
+MONGODB_URL=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret_key
+GROQ_API_KEY=your_groq_ai_api_key
+GOOGLE_CLIENT_ID=your_google_oauth_client_id
+SMTP_EMAIL=your_gmail_for_alerts (optional)
+SMTP_PASSWORD=your_app_password (optional)
+```
+
+**Run the backend:**
+```bash
+uvicorn main:app --reload
+```
+
+### 3. Frontend Setup (`/client`)
+The frontend is built with React and Vite.
+
 ```bash
 cd client
 npm install
+```
+
+**Create a `.env` file in the `/client` directory:**
+```env
+VITE_BACKEND_URL=http://localhost:8000
+VITE_GOOGLE_CLIENT_ID=your_google_oauth_client_id
+```
+
+**Run the frontend:**
+```bash
 npm run dev
 ```
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend**: React, Vite, Tailwind CSS, Lucide Icons.
+- **Backend**: FastAPI (Python), JWT Auth.
+- **Database**: MongoDB Atlas.
+- **AI**: Groq (LLM) for behavioral insights.
 
 ---
 
