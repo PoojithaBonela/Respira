@@ -377,7 +377,7 @@ Insight:"""
                     "content": prompt
                 }
             ],
-            model="llama-3.1-8b-instant",
+            model="qwen/qwen3.6-27b",
             temperature=1.0,
             max_tokens=80
         )
