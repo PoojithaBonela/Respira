@@ -196,7 +196,7 @@ TONE: Professional, calm, insight-driven, and supportive.
                     "content": prompt
                 }
             ],
-            model="qwen/qwen3.6-27b",
+            model="openai/gpt-oss-20b",
             temperature=0.7,
             max_tokens=300
         )
@@ -377,7 +377,7 @@ Insight:"""
                     "content": prompt
                 }
             ],
-            model="qwen/qwen3.6-27b",
+            model="openai/gpt-oss-20b",
             temperature=1.0,
             max_tokens=80
         )
