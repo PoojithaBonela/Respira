@@ -196,7 +196,7 @@ TONE: Professional, calm, insight-driven, and supportive.
                     "content": prompt
                 }
             ],
-            model=model="qwen/qwen3.6-27b",
+            model="qwen/qwen3.6-27b",
             temperature=0.7,
             max_tokens=300
         )
